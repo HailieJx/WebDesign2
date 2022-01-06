@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/slick-master/slick/slick.css">
+    <link rel="stylesheet" href="slick-master/slick/slick-theme.css">
+    <link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
+    <link href="stylesheet.css" rel="stylesheet" >
+
+<script>
+    function showImage(imgName) 
+{
+    var largeImg = document.getElementById("large");
+    var thePath = "images/";
+    var theSource = thePath + imgName;
+
+    largeImg.src = theSource;
+    largeImg.alt = imgName;
+}
+
+var imgWindow;
+function largePic()
+{
+    var bigImg = document.getElementById("bigOne");
+    var url = bigImg.getAttribute("src");
+
+    imgWindow = window.open(url, 'images', 'height=750px,width=750px,toolbars=no,menubar=no,location=no,scrollbars=no,resizable=no');
+}
+
+//Popup Window
+        
+function popup(mylink, windowname)
+        { if (! window.focus)return true; var href;
+        if (typeof(mylink) == 'string') href=mylink;
+        else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
+        return false; } 
+
+//Alertbox
+function logalert()
+{
+alert("You are logged in");
+}
+
+</script>
+
+</head>
+<body>
+
+    <div id="header">
+        <div id="line1">
+        </div>
+
+    <h1> The Purple Diamond <br> Casino </h1>
+
+
+    <button id="logbut" value="Click" onclick="logalert();"> Login </button>
+    <button id="signbut" onclick="window.location.href='signup.html';"> Sign Up </button>
+    
+
+        <div id="line2">
+        </div>
+    </div>
+
+    <div id="main">
+
+        <nav>
+            <ul id="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#abouttext">About Us</a></li>
+              <li><a href="#contacttext">Contact Us</a></li>
+              <li><a href="#gamestext">Our Games</a></li>
+            </ul>
+          </nav>
+
+          <!-- Carousel Start -->
+          <!-- Creating a class div called demo and divs for each image -->
+          <div class ="demo">
+            <div><img src="/images/img1.png" alt="img1" class="pics"></div>
+            <div><img src="/images/img2.png" alt="img2" class="pics"></div>
+            <div><img src="/images/img3.png" alt="img3" class="pics"></div>
+        </div>
+    
+        <!-- Script source for carousel -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="slick-master/slick/slick.js"></script>
+    
+        <!-- Carousel settings -->
+        <script>
+            $(document).ready(function(){
+            $('.demo').slick({
+                dots:true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+    
+            });
+    
+        });
+        
+        
+
+        </script>
+        <!-- Carousel End -->
+        
+    
+    <div id="games">
+
+    <h2 id="gamestext"> Our Games </h2>
+    
+        <div class="thumbnail">
+            <img src="images/megamoola.png" alt="moolagame"  >
+            <div class="name">Mega Moola </div>
+            <div class="try" >
+                <a href="megamoola.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+         </div>
+
+
+        <div class="thumbnail">
+            <img src="images/buffalo.jpg" alt="buffalogame">
+            <div class="name">Buffalo King</div>
+            <div class="try">
+                <a href="buffalo.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div>  
+
+
+        <div class="thumbnail">
+            <img src="/images/bookofdead.jpg" alt="bodgame">
+            <div class="name">Book of Dead</div>
+            <div class="try">
+                <a href="bookofdead.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+
+
+        <div class="thumbnail">
+            <img src="images/dragonpearls.jpg" alt="dragonpearlsgame">
+            <div class="name">Dragon Pearls</div>
+            <div class="try">
+                <a href="dragonpearls.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+
+
+        <div class="thumbnail">
+            <img src="images/queenofnile.jpg" alt="nilegame">
+            <div class="name">Queen of Nile</div>
+            <div class="try">
+                <a href="queenofnile.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+    
+
+        <div class="thumbnail">
+            <img src="images/shirobi.jpg" alt="shirobigame">
+            <div class="name">Shirobi Hamster</div>
+            <div class="try">
+                <a href="shirobi.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+
+
+        <div class="thumbnail">
+            <img src="images/gold.png" alt="goldgame">
+            <div class="name">Gold Factory</div>
+            <div class="try">
+                <a href="gold.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+
+
+        <div class="thumbnail">
+            <img src="images/dragonshrine.jpg" alt="dragonshrinegame">
+            <div class="name">Dragon Shrine</div>
+            <div class="try">
+                <a href="dragonshrine.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+
+        
+        <div class="thumbnail">
+            <img src="images/wildframes.png" alt="wildframesgame">
+            <div class="name">Wild Frames</div>
+            <div class="try">
+                <a href="wildframes.html" onClick="return popup(this, 'megamoola')"> <p class="txttry" >Try Game </p></a>
+                </div>
+        </div> 
+    
+
+    </div>
+
+    <div id="aboutcontact">
+
+    <h3 id="abouttext"> About Us </h3>
+
+    <p>The Purple Diamond Casino has been open since the year 2019. Our Casino aims to give you a secure, safe and fun place to play. We are always here for your entertainment.</p>
+
+    <h4 id="contacttext"> Contact Us </h4>
+
+        <div class="formsection">
+        <form action="page">
+            
+              <br>
+
+              <label for="name"><b>Name</b></label>
+              <input type="text" placeholder="Enter Name" name="name" id="name" required>
+              <br>
+              <label for="surname"><b>Surname</b></label>
+              <input type="text" placeholder="Enter Surname" name="surname" id="surname" required>
+              <br>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" name="email" id="email" required>
+              <br>
+            
+              <button type="submit" id="register">Register</button>
+        
+            </form>
+            </div>
+           
+            
+            
+          
+
+          <p id="contact"> Contact Number: +356 21346345 <br> Address: Paola, Green Street, 45 </p>   
+        
+    </div>
+
+    <div id="footer"> 
+
+        <p id="footertext"> The Purple Diamond Casino - 2021</p>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
